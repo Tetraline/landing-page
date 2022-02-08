@@ -14,11 +14,11 @@ h1 {
     color: #1F2937;
 }
 
-.header p, .header a, .one h1, .one p{
+.header p, .header a, .one h1, .one p, .footer-wrapper p{
     color:white;
 }
 
-.header-wrapper, .one-wrapper {
+.header-wrapper, .one-wrapper, .footer-wrapper {
     background-color: #1F2937;
 }
 
@@ -149,6 +149,10 @@ button {
     flex-wrap:wrap;
     background-color: blue;
     border-radius: 30px;
+    width:880px;
+    margin:auto;
+    padding: 14px;
+    margin-top: 50px;
 }
 
 .four h3 {
@@ -167,4 +171,14 @@ button {
 
 .four button {
     align-self:center;
+    margin-top:40px;
+}
+
+
+.footer {
+    margin-top:50px;
+    margin-left: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
 }
