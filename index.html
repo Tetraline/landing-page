@@ -34,7 +34,8 @@
 
              <div class="one left">
                 <h1>We supply your kitchen</h1>    
-                <p>Timely deliveries are the backbone of your operations. We can always be relied upon to ensure your business success.</p>
+                <p id="randomDemo">
+                </p>
                 <button>Sign up</button>
              </div>
              <div class="one right">
@@ -82,6 +83,25 @@
 
 
 </div>
+
+<script>
+    let text;
+    let number = Math.random();
+    console.log("Random number was " + number); 
+    if (number < 0.33) {
+        text = "Timely deliveries are the backbone of your operations. We can always be relied upon to ensure your business success. (1)"
+        console.log("THREE"); 
+    } else {
+        if (number < 0.66) {
+            text ="Our company specializes in on time delivery for your business. (2)";
+            console.log("TWO"); 
+        } else {
+            text = "We've been supplying kitchens for over 80 years. We have the knowledge required to excel. (3)";
+            console.log("ONE"); 
+        }
+    }
+    document.getElementById("randomDemo").innerHTML = text;
+</script>
     
 </body>
 </html>
