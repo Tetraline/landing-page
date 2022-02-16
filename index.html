@@ -101,6 +101,48 @@
         }
     }
     document.getElementById("randomDemo").innerHTML = text;
+
+    // Anonymous functions
+    let a = [1,2,3];
+    // Let's say we want to double each element in array a
+    // We want to do this 500ms after the page loads
+    // We could use an array doubling function:
+    function arrayDouble(ar) {
+        let b = [];
+        for (let i =0; i<ar.length;i++) {
+           b[i] = ar[i]*2; 
+        }
+        console.log(b);
+    }
+    setTimeout(arrayDouble(a),500);
+
+    // It might be cleaner to write this function inside setTimeout
+    // This function behaves strangely- the line is NOT
+    //setTimeout(function(a){
+    //Rather,             ^ This a is not there.
+    // The anonymous function uses the a from earlier in the code
+    setTimeout(function(){
+        let b = [];
+        for (let i =0; i<a.length;i++) {
+           b[i] = a[i]*2; 
+        }
+        console.log(b);
+    }, 500);
+    // It is possible to make this anonymous function cleaner!
+    // This uses the => arrow operator
+    setTimeout( () => {
+        let b = [];
+        for (let i =0; i<a.length;i++) {
+           b[i] = a[i]*2; 
+        }
+        console.log(b);
+    }, 500);
+    // It is possible to omit the curly brackets if the function has only one line.
+    // If the function takes one parameter, you can omit the brackets around that parameter.
+    // Another example:
+    let doubled = a.map(item => item * 2);
+    // The map function returns an array with each item multiplied by two.
+    console.log(doubled);
 </script>
     
 </body>
